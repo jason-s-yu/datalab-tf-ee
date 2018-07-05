@@ -1,0 +1,12 @@
+{
+  "name": "datalab-tf-ee",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "docker run -it -p \"127.0.0.1:8081:8080\" -v \"$WORKSPACE:/content\" -e \"PROJECT_ID=$GCP_PROJECT_ID\" $CONTAINER_IMAGE_NAME",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,57 @@
+2018-07-05 16:18:48,710 DEBUG    root            Loaded Command Group: ['gcloud', 'projects']
+2018-07-05 16:18:48,723 DEBUG    root            Loaded Command Group: ['gcloud', 'projects', 'describe']
+2018-07-05 16:18:48,725 DEBUG    root            Running [gcloud.projects.describe] with arguments: [--format: "value(projectNumber)", PROJECT_ID: "DATALAB-TF-EE"]
+2018-07-05 16:18:48,736 DEBUG    root            (gcloud.projects.describe) You do not currently have an active account selected.
+Please run:
+
+  $ gcloud auth login
+
+to obtain new credentials, or if you have already logged in with a
+different account:
+
+  $ gcloud config set account ACCOUNT
+
+to select an already authenticated account to use.
+Traceback (most recent call last):
+  File "/tools/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 787, in Execute
+    resources = args.calliope_command.Run(cli=self, args=args)
+  File "/tools/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 754, in Run
+    resources = command_instance.Run(args)
+  File "/tools/google-cloud-sdk/lib/surface/projects/describe.py", line 46, in Run
+    return projects_api.Get(project_ref)
+  File "/tools/google-cloud-sdk/lib/googlecloudsdk/api_lib/cloudresourcemanager/projects_api.py", line 50, in Get
+    client = projects_util.GetClient()
+  File "/tools/google-cloud-sdk/lib/googlecloudsdk/api_lib/cloudresourcemanager/projects_util.py", line 42, in GetClient
+    return apis.GetClientInstance('cloudresourcemanager', 'v1')
+  File "/tools/google-cloud-sdk/lib/googlecloudsdk/api_lib/util/apis.py", line 255, in GetClientInstance
+    api_name, api_version, no_http, _CheckResponse, disable_resource_quota)
+  File "/tools/google-cloud-sdk/lib/googlecloudsdk/api_lib/util/apis_internal.py", line 149, in _GetClientInstance
+    http_client = http.Http(disable_resource_quota=disable_resource_quota)
+  File "/tools/google-cloud-sdk/lib/googlecloudsdk/core/credentials/http.py", line 66, in Http
+    creds = store.LoadIfEnabled()
+  File "/tools/google-cloud-sdk/lib/googlecloudsdk/core/credentials/store.py", line 275, in LoadIfEnabled
+    return Load()
+  File "/tools/google-cloud-sdk/lib/googlecloudsdk/core/credentials/store.py", line 338, in Load
+    raise NoActiveAccountException()
+NoActiveAccountException: You do not currently have an active account selected.
+Please run:
+
+  $ gcloud auth login
+
+to obtain new credentials, or if you have already logged in with a
+different account:
+
+  $ gcloud config set account ACCOUNT
+
+to select an already authenticated account to use.
+2018-07-05 16:18:48,741 ERROR    root            (gcloud.projects.describe) You do not currently have an active account selected.
+Please run:
+
+  $ gcloud auth login
+
+to obtain new credentials, or if you have already logged in with a
+different account:
+
+  $ gcloud config set account ACCOUNT
+
+to select an already authenticated account to use.

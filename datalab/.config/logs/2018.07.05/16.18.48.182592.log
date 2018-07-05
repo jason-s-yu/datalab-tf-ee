@@ -1,0 +1,6 @@
+2018-07-05 16:18:48,186 DEBUG    root            Loaded Command Group: ['gcloud', 'config']
+2018-07-05 16:18:48,189 DEBUG    root            Loaded Command Group: ['gcloud', 'config', 'list']
+2018-07-05 16:18:48,191 DEBUG    root            Running [gcloud.config.list] with arguments: [--format: "value(compute.zone)", --quiet: "True"]
+2018-07-05 16:18:48,195 INFO     root            Display format "config value(compute.zone)".
+2018-07-05 16:18:48,195 INFO     ___FILE_ONLY___ 
+
